@@ -17,9 +17,9 @@ year=$(date | rev | cut -d " " -f1 | rev)
 pname=$2
 
 echo "$s"
-echo "$m" "EPITECH PROJECT , $year"
+echo "$m" "EPITECH PROJECT, $year"
 echo "$m" $pname
-echo "$m" "File description :"
+echo "$m" "File description:"
 
 awk -v line_head=$m '{printf "%s %s\n", line_head, $0}'
 
