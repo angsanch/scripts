@@ -1,8 +1,15 @@
 #!/bin/bash
+basepath=$(dirname $(readlink -f $0))
 
 if [ ! -f "$1" ]
 then
 	touch "$1"
+fi
+
+pname=$2
+if [[ $# < 2 ]]
+then
+	pname=$(basename $1)
 fi
 
 if [[ "$1" == *".c" || "$1" == *".h" ]]
@@ -17,5 +24,5 @@ else
 fi
 
 echo "Write the description(ctrl+d to end):"
-./header.sh $mode "$2" | cat - "$1" > "$1.temp"
+$basepath/epitech_header.sh $mode "$pname" | cat - "$1" > "$1.temp"
 mv "$1.temp" "$1"
