@@ -1,7 +1,8 @@
 #!/bin/bash
+basepath=$(dirname $(readlink -f $0))
 
-dir="."
-save_dir=$HOME/scripts
+dir=$(pwd)
+save_dir=$basepath
 file_name="coding-style-reports.log"
 
 if [ ! -z $1 ]
