@@ -1,8 +1,8 @@
 #!/bin/bash
 basepath=$1
 
+alias coding-style=$basepath/epitech_coding-style.sh
 alias banana=$basepath/epitech_norminette.sh
 alias header=$basepath/epitech_header.sh
 alias fcreate=$basepath/epitech_file_create.sh
-
-alias install-criterion=$basepath/install_criterion.sh
+alias gidentity=$basepath/git_identity.sh
