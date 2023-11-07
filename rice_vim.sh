@@ -1,4 +1,4 @@
-#!/bi	/bash
+#!/bin/bash
 basepath=$(dirname $(readlink -f $0))
 
 data_dir=$basepath/data
