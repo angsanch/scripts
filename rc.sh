@@ -1,7 +1,7 @@
 #!/bin/bash
 basepath=$1
 
-./local_files.sh
+$basepath/local_files.sh
 
 alias coding-style=$basepath/epitech_coding-style.sh
 alias banana=$basepath/epitech_norminette.sh
