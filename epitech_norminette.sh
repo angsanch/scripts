@@ -15,9 +15,11 @@ echo $dir $save_dir
 $basepath/epitech_coding-style.sh $dir $save_dir | awk 'END{printf "%s", $0}'
 echo
 echo
-ignored=$(git check-ignore $(cat $file | cut -d ':' -f1) | sed "s/ /\\|/")
+ignored=$(git check-ignore $(cat $file | cut -d ':' -f1) | tr '\n' '|')
+ignored=${ignored%|}
 
-cat $file | grep -v "$ignored" |\
+cat "$file" | awk -v patterns="$ignored" '{ n=split(patterns, arr, /\|/);
+    for (i=1; i<=n; i++) if (index($0, arr[i]) > 0) next } 1' |\
 awk -v basepath=$basepath '{
 	get_code = "echo " $0 " | rev | cut -d \":\" -f1 | rev"
 	get_code | getline code
