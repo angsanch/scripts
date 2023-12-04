@@ -1,0 +1,22 @@
+let identity = system('git config user.identity | tr -d "\n"')
+
+syntax on
+set tabstop=4 "Size of tabs
+set shiftwidth=4 "Autoindent size
+set autoindent "mantain indentation level for next line
+set number "add line numbers
+
+if identity == "epitech"
+    set expandtab "place spaces no tabs
+    set softtabstop=4 "group delete spaces in tabs
+endif
+
+if identity == "epitech" || identity == "42"
+    command Cc set colorcolumn=80
+    command Ncc set colorcolumn-=80
+    Cc
+endif
+
+" Highlight trailing spaces and tabs
+highlight ExtraWhitespace ctermbg=red guibg=red
+match ExtraWhitespace /\s\+$/
