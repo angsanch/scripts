@@ -25,4 +25,4 @@ echo Email: $email
 
 git config user.email "$email"
 git config user.name "$name"
-git config user.identity "$identity"
+git config user.identity "$1"
