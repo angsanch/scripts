@@ -16,10 +16,17 @@ if identity == "epitech"
     set softtabstop=4 "group delete spaces in tabs
 endif
 
-if identity == "epitech" || identity == "42"
-    command Cc set colorcolumn=80
-    command Ncc set colorcolumn-=80
-    Cc
+let max_line_length = -1
+if identity == "epitech"
+	let max_line_length = 80
+endif
+if identity == "42"
+	let max_line_length = 81
+endif
+if max_line_length != -1
+	command! Cc execute 'set colorcolumn=' . max_line_length
+   	command! Ncc execute 'set colorcolumn-=' . max_line_length
+	Cc
 endif
 
 " Highlight trailing spaces and tabs
