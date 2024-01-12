@@ -5,7 +5,11 @@ packages="git
 		tree
 		zsh
         valgrind
-        build-essential"
+        build-essential
+		flameshot
+		gobuster
+		nmap
+		openvpn"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
