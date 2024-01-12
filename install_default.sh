@@ -2,7 +2,10 @@
 
 packages="git
 		vim
-		tree" 
+		tree
+		zsh
+        valgrind
+        build-essential"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
