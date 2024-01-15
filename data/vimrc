@@ -2,6 +2,7 @@ let identity = system('git config user.identity | tr -d "\n"')
 
 let g:user42 = 'angsanch'
 let g:mail42 = 'angsanch@student.42madrid.com'
+let filename = expand('%:t')
 
 syntax on
 set autoindent "mantain indentation level for next line
@@ -12,7 +13,9 @@ set tabstop=4 "Size of tabs
 
 if identity == "epitech"
 	set shiftwidth=4 "Autoindent size
-	set expandtab "place spaces no tabs
+	if filename != "Makefile"
+        set expandtab "place spaces no tabs
+    endif
     set softtabstop=4 "group delete spaces in tabs
 endif
 
