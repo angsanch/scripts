@@ -1,6 +1,8 @@
 #!/bin/bash
 basepath=$1
 
+PATH="$PATH:.:/home/user/.local/share/bob/nvim-bin:/home/user/.cargo/bin"
+
 $basepath/local_files.sh
 
 alias coding-style=$basepath/epitech_coding-style.sh
