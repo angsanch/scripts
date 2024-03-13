@@ -1,5 +1,7 @@
 #!/usr/bin/env bash
 
+source rc.sh .
+
 packages="git
 		vim
 		tree
@@ -24,13 +26,14 @@ else
 	echo "No supported package manager found"
 fi
 
-./config_flameshot
-./rice_vim
+./config_flameshot.sh
+./rice_vim.sh
 echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"' | /bin/zsh
 
 #NVchad
 cargo install --git https://github.com/MordechaiHadad/bob.git
 bob use latest
-git clone https://github.com/NvChad/starter ~/.config/nvim #theme: flexoki
+./rice_nvim.sh
+
 mkdir -p ~/.local/share/fonts
 cp data/AgaveNerdFont-Regular.ttf ~/.local/share/fonts
