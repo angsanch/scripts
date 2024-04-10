@@ -10,7 +10,10 @@ packages="git
         build-essential
 		flameshot
 		gobuster
+		ffuf
 		nmap
+		netcat
+		hydra
 		openvpn
 		sl
 		rustc
