@@ -12,4 +12,5 @@ alias fcreate=$basepath/epitech_file_create.sh
 alias gidentity=$basepath/git_identity.sh
 alias norminette="python3 -m norminette"
 
+alias gtree='git log --graph --decorate --oneline --all'
 alias tree='echo "Good try. Dani never looses. Tonto el que lo lea"; sleep 2; exit'
