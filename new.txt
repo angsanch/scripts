@@ -1,0 +1,23 @@
+sudo apt update
+themes:
+	mouse			-> yaru
+	applications	-> mint y dark red
+	icons			-> yaru red dark
+	desktop			-> mint y dark red
+black desktop background
+install git vim
+clone this repository
+install defaults
+chsh /bin/zsh
+inject rc.sh
+shortcuts:
+	switch to left workspace	-> ctrl+super+left
+	switch to right workspace	-> ctrl+super+right
+	lock screen					-> super+l
+	terminal					-> super+r
+	settings					-> super+i
+	flameshot gui				-> super+s
+	playerctl play-pause		-> f12				#only if no f-key provides pause-play
+maximize, instead of tile, when dragging a window to the top of the edge
+delay before displaying the alt-tab switcher = 0
+create ssh and link to github

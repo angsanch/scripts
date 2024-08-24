@@ -9,10 +9,13 @@ packages="git
         valgrind
         build-essential
 		flameshot
+		playerctl
+		htop
+		btop
 		gobuster
 		ffuf
 		nmap
-		netcat
+		netcat-openbsd
 		hydra
 		openvpn
 		sl
@@ -34,8 +37,9 @@ fi
 echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"' | /bin/zsh
 
 #NVchad
+PATH="$HOME/.cargo/bin:$PATH"
 cargo install --git https://github.com/MordechaiHadad/bob.git
-bob use latest
+bob use latest && sudo ln -s /home/angsanch/.local/share/bob/nvim-bin/nvim /bin/nvim
 ./rice_nvim.sh
 
 mkdir -p ~/.local/share/fonts
