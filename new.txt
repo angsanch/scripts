@@ -21,3 +21,4 @@ shortcuts:
 maximize, instead of tile, when dragging a window to the top of the edge
 delay before displaying the alt-tab switcher = 0
 create ssh and link to github
+set hour and date format to "%H:%M %a\%d/%m/%y"
