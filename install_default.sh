@@ -17,6 +17,8 @@ packages="git
 		nmap
 		netcat-openbsd
 		hydra
+		steghide
+		stegsnow
 		openvpn
 		sl
 		rustc
