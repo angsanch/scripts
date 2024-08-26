@@ -22,7 +22,8 @@ packages="git
 		openvpn
 		sl
 		rustc
-		cargo"
+		cargo
+		adb"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
