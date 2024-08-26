@@ -5,5 +5,5 @@ data_dir=$basepath/data
 
 cat $data_dir/nvim_config.lua > ~/.config/nvim/lua/options.lua
 
-git clone https://github.com/NvChad/starter ~/.config/nvim/
+git clone https://github.com/NvChad/starter ~/.config/nvim/ || echo $(cd ~/.config/nvim && git pull origin main)
 echo "remember to change theme to flexoki. spc + t + h"
