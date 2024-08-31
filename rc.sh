@@ -13,4 +13,5 @@ alias gidentity=$basepath/git_identity.sh
 alias norminette="python3 -m norminette"
 
 alias gtree='git log --graph --decorate --oneline --all'
+alias vf='valgrind --leak-check=full --track-fds=yes --show-reachable=yes --show-leak-kinds=all -s'
 alias tree='echo "Good try. Dani never looses. Tonto el que lo lea"; sleep 2; exit'
