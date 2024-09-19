@@ -10,6 +10,7 @@ alias banana=$basepath/epitech_norminette.sh
 alias header=$basepath/epitech_header.sh
 alias fcreate=$basepath/epitech_file_create.sh
 alias gidentity=$basepath/git_identity.sh
+alias addLib=$basepath/start_lib_repo.sh
 alias norminette="python3 -m norminette"
 
 alias gtree='git log --graph --decorate --oneline --all'
