@@ -42,7 +42,7 @@ echo 'sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/mast
 #NVchad
 PATH="$HOME/.cargo/bin:$PATH"
 cargo install --git https://github.com/MordechaiHadad/bob.git
-bob use latest && sudo ln -s /home/angsanch/.local/share/bob/nvim-bin/nvim /bin/nvim
+bob use latest && sudo ln -s $HOME/.local/share/bob/nvim-bin/nvim /bin/nvim
 ./rice_nvim.sh
 
 mkdir -p ~/.local/share/fonts
