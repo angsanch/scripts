@@ -3,6 +3,10 @@ require "nvchad.options"
 vim.api.nvim_create_user_command(
   'Style',
   function(opts)
+  	if opts.args == "" then
+		return
+	end
+
 	local filename = vim.fn.expand('%:t')
 
 	-- Set options
@@ -36,7 +40,7 @@ vim.api.nvim_create_user_command(
 
 	vim.notify("Settings for " .. identity)
 	end,
-  { nargs = 1 }
+  { nargs = "?" }
 )
 
 
