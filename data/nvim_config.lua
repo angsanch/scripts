@@ -22,6 +22,7 @@ vim.api.nvim_create_user_command(
 		end
 		vim.opt.softtabstop = 4 -- Group delete spaces in tabs
 	elseif identity == "42" then
+		vim.opt.softtabstop = 0
 		vim.opt.expandtab = false -- Use tabs instead of spaces
 	elseif identity == "personal" then
 		vim.opt.expandtab = false -- Use tabs instead of spaces
