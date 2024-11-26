@@ -8,4 +8,8 @@ rm -rf ~/.local/share/nvim ~/.cache/nvim
 cat $data_dir/nvim_config.lua > ~/.config/nvim/lua/options.lua
 
 git clone https://github.com/NvChad/starter ~/.config/nvim/ || echo $(cd ~/.config/nvim && git pull origin main)
+
+mkdir -p ~/.config/nvim/plugin
+cp $data_dir/42header.vim ~/.config/nvim/plugin/.
+
 echo "remember to change theme to flexoki. spc + t + h"
