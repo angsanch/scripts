@@ -1,19 +1,28 @@
 require "nvchad.options"
 
+-- try dissableing windwp/nvim-autopairs
+
 vim.api.nvim_create_user_command(
   'Style',
   function(opts)
-  	if opts.args == "" then
-		return
-	end
-
 	local filename = vim.fn.expand('%:t')
 
 	-- Set options
+	vim.opt.whichwrap = "b,s"
 	vim.opt.wrap = false
 	vim.opt.autoindent = true
 	vim.opt.tabstop = 4 -- Size of tabs
 	vim.opt.shiftwidth = 4 -- Autoindent size
+
+	vim.cmd [[
+		highlight TrailingSpaces ctermbg=red guibg=red
+		match TrailingSpaces /\s\+$/
+	]]
+
+
+	if opts.args == "" then
+		return
+	end
 
 	identity = opts.args
 	if identity == "epitech" then
