@@ -13,3 +13,14 @@ mkdir -p ~/.config/nvim/plugin
 cp $data_dir/42header.vim ~/.config/nvim/plugin/.
 
 sed -i '/theme =/c\    theme = "flexoki",' ~/.config/nvim/lua/chadrc.lua
+
+# add lsp config
+input_file="$datadir/nvim_lsp.lua"
+output_file="~/.config/nvim/lua/configs/lspconfig.lua"
+target_line="-- Danis cool config"
+awk -v target="$target_line" '{
+  if ($0 == target) exit;  # Exit when the target line is found
+  print;                  # Print lines before the target
+}' "$output_file" | cat - "$input_file" > temp.txt
+rm -f "$output_file"
+mv temp.txt "$output_file"
