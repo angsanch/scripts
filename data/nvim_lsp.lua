@@ -8,9 +8,9 @@ lspconfig.hls.setup {
 }
 
 lspconfig.clangd.setup {
-    cmd = { "clangd" }, -- Use system-installed clangd
+    cmd = { "clangd", "--header-insertion=never" },
     filetypes = { "c", "cpp", "objc", "objcpp" },
-    root_dir = function(fname)
+	root_dir = function(fname)
         return lspconfig.util.root_pattern("compile_commands.json", ".git")(fname) or lspconfig.util.path.dirname(fname)
     end,
     capabilities = capabilities,
