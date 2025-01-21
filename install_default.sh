@@ -23,6 +23,7 @@ packages="git
 		sl
 		rustc
 		cargo
+		clangd
 		adb"
 
 if command -v dnf &> /dev/null; then
