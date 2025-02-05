@@ -21,8 +21,6 @@ packages="git
 		stegsnow
 		openvpn
 		sl
-		rustc
-		cargo
 		clangd
 		adb"
 
@@ -35,6 +33,9 @@ elif command -v apt &> /dev/null; then
 else
 	echo "No supported package manager found"
 fi
+
+#Rustc
+curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
 
 ./config_flameshot.sh
 ./rice_vim.sh
