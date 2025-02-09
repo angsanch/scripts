@@ -16,3 +16,15 @@ lspconfig.clangd.setup {
     capabilities = capabilities,
     on_attach = on_attach,
 }
+
+lspconfig.asm_lsp.setup({
+    filetypes = { "asm" },
+    settings = {
+        asm = {
+            dialect = "nasm",
+            disableWarnings = true,  -- Disable unnecessary warnings
+            highlightJumpLabels = true,
+        }
+    },
+	handlers = { ["textDocument/publishDiagnostics"] = function() end }
+})
