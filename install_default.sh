@@ -22,7 +22,8 @@ packages="git
 		openvpn
 		sl
 		clangd
-		adb"
+		adb
+		bear"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
