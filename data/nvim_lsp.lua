@@ -28,3 +28,14 @@ lspconfig.asm_lsp.setup({
     },
 	handlers = { ["textDocument/publishDiagnostics"] = function() end }
 })
+
+lspconfig.pyright.setup({
+  settings = {
+    python = {
+      analysis = {
+        typeCheckingMode = "basic",  -- Adjust based on your needs
+        autoImportCompletions = true,
+      },
+    },
+  },
+})
