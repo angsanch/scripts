@@ -23,7 +23,8 @@ packages="git
 		sl
 		clangd
 		adb
-		bear"
+		bear
+        cmake"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
