@@ -1,4 +1,5 @@
 -- Danis cool config
+local lspconfig = require("lspconfig")
 
 lspconfig.hls.setup {
 	on_attach = on_attach,
