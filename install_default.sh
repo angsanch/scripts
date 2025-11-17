@@ -24,7 +24,8 @@ packages="git
 		clangd
 		adb
 		bear
-        cmake"
+        cmake
+		qt5ct"
 
 if command -v dnf &> /dev/null; then
 	echo "Using dnf"
@@ -35,6 +36,10 @@ elif command -v apt &> /dev/null; then
 else
 	echo "No supported package manager found"
 fi
+
+#Dark qt5
+cp data/qt5ct.conf .config/qt5ct/qt5ct.conf
+echo "export QT_QPA_PLATFORMTHEME=qt5ct" >> ~/.profile
 
 #Rustc
 curl --proto '=https' --tlsv1.2 -sSf https://sh.rustup.rs | sh -s -- -y
