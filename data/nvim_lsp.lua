@@ -62,10 +62,17 @@ vim.lsp.config("gopls", {
     },
 })
 
+vim.lsp.config("openscad-language-server", {
+    cmd = { "openscad-language-server" },
+    capabilities = capabilities,
+    filetypes = { "openscad" },
+})
+
 vim.lsp.enable({
     "hls",
     "clangd",
     "asm_lsp",
     "pyright",
-	"gopls",
+    "gopls",
+    "openscad-language-server",
 })
